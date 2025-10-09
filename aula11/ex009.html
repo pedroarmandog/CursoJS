@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De qual país você é?</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            background-color: rgb(50, 192, 240);
+            color: white;
+            padding: 50px;
+            border-radius: 10px;
+            text-align: center;
+            flex: auto;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.363);
+        }
+
+        main {
+            text-align: center;
+            background-color: rgb(28, 110, 138);
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.315);
+            
+            
+        }
+
+        input.campo {
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid rgb(50, 192, 240);
+            font-size: 16px;
+            width: 250px;
+            margin-right: 10px;
+            margin-top: 80px;
+
+            
+        }
+
+        input.botao {
+            padding: 10px 50px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .campo {
+            margin-top: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual é o seu páis?</h1>
+    <main>
+        <input type="text" name="txtpais" id="txtpais" class="campo" placeholder="Digite o nome do país">
+        <input type="button" value="Verificar" onclick="verificar()" class="botao">
+    </main>
+    <div id="res">
+        
+    </div>
+
+    <script>
+        function verificar() {
+            var txp = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            var pais = txp.value
+            res.innerHTML = `Você mora em <strong>${pais}</strong> `
+            if (pais == 'Brasil' || pais == 'Brasil' )
+                res.innerHTML += `Você é <strong>BRASILEIRO</strong>!`
+            else
+                res.innerHTML += `Você é <strong>ESTRANGEIRO</strong>!`
+        }
+    </script>
+</body>
+</html>
